@@ -119,10 +119,49 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ValutesPage.xaml.cs">
+      <DependentUpon>ValutesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Valutes\AMD.cs" />
+    <Compile Include="Valutes\AUD.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Valutes\AZN.cs" />
+    <Compile Include="Valutes\BGN.cs" />
+    <Compile Include="Valutes\BRL.cs" />
+    <Compile Include="Valutes\BYN.cs" />
+    <Compile Include="Valutes\CAD.cs" />
+    <Compile Include="Valutes\CHF.cs" />
+    <Compile Include="Valutes\CNY.cs" />
+    <Compile Include="Valutes\CZK.cs" />
+    <Compile Include="Valutes\DKK.cs" />
+    <Compile Include="Valutes\EUR.cs" />
+    <Compile Include="Valutes\GBP.cs" />
+    <Compile Include="Valutes\HKD.cs" />
+    <Compile Include="Valutes\HUF.cs" />
+    <Compile Include="Valutes\INR.cs" />
+    <Compile Include="Valutes\JPY.cs" />
+    <Compile Include="Valutes\KGS.cs" />
+    <Compile Include="Valutes\KRW.cs" />
+    <Compile Include="Valutes\KZT.cs" />
+    <Compile Include="Valutes\MDL.cs" />
+    <Compile Include="Valutes\NOK.cs" />
+    <Compile Include="Valutes\PLN.cs" />
+    <Compile Include="Valutes\RON.cs" />
+    <Compile Include="Valutes\RootObjects\Rootobject.cs" />
+    <Compile Include="Valutes\RootObjects\Valute.cs" />
+    <Compile Include="Valutes\SEK.cs" />
+    <Compile Include="Valutes\SGD.cs" />
+    <Compile Include="Valutes\TJS.cs" />
+    <Compile Include="Valutes\TMT.cs" />
+    <Compile Include="Valutes\TRY.cs" />
+    <Compile Include="Valutes\UAH.cs" />
+    <Compile Include="Valutes\USD.cs" />
+    <Compile Include="Valutes\UZS.cs" />
+    <Compile Include="Valutes\XDR.cs" />
+    <Compile Include="Valutes\ZAR.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -148,10 +187,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="ValutesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.10</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="System.Text.Json">
+      <Version>5.0.1</Version>
     </PackageReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

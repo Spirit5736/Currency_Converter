@@ -16,17 +16,17 @@
             <RowDefinition Height="16*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition />
-            <ColumnDefinition />
+            <ColumnDefinition Width="25*" />
+            <ColumnDefinition Width="23*" />
+            <ColumnDefinition Width="24*" />
         </Grid.ColumnDefinitions>
-        <TextBlock HorizontalAlignment="Center" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Height="19" Width="47"/>
-        <TextBlock HorizontalAlignment="Center" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Grid.Column="2" Height="19" Width="47"/>
+        <TextBox HorizontalAlignment="Center" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Height="69" Width="65" Name="FirstTextBox"/>
+        <TextBlock HorizontalAlignment="Center" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Grid.Column="2" Height="19" Width="71"/>
         <TextBlock HorizontalAlignment="Center" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Grid.Row="2" Height="19" Width="47"/>
         <TextBlock HorizontalAlignment="Center" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Grid.Row="2" Grid.Column="2" Height="19" Width="47"/>
-        <TextBlock HorizontalAlignment="Center" Grid.Row="3" Grid.Column="2" Width="113"><Hyperlink NavigateUri="http://www.bing.com">Изменить валюту</Hyperlink></TextBlock>
-        <TextBlock HorizontalAlignment="Center" Grid.Row="3" Width="113"><Hyperlink NavigateUri="http://www.bing.com">Изменить валюту</Hyperlink></TextBlock>
-        <CheckBox Content="CheckBox" Grid.Column="2" Margin="755,76,0,0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Center" Grid.Row="3" Grid.Column="2" Width="113"><Hyperlink  Click="HyperlinkButton_Click">Изменить валюту</Hyperlink></TextBlock>
+        <TextBlock HorizontalAlignment="Center" Grid.Row="3" Width="113"><Hyperlink Click="HyperlinkButton_Click">Изменить валюту</Hyperlink></TextBlock>
+        <CheckBox Content="CheckBox" Grid.Column="2" Margin="755,76,0,0" VerticalAlignment="Top" Height="32" Width="120"/>
         <Grid Grid.Column="1" HorizontalAlignment="Center" Height="24" Grid.Row="1" VerticalAlignment="Top" Width="78" Margin="0,16,0,0">
             <Rectangle HorizontalAlignment="Center" Height="15" Stroke="#FF646464" VerticalAlignment="Center" Width="60" Fill="#FF646464"/>
             <Path Data="M0.5,0.5 L27.544107,27.544107 L0.5,27.544107 z" HorizontalAlignment="Left" Height="24" Margin="54,0,0,0" Stretch="Fill" Stroke="#FF646464" UseLayoutRounding="False" VerticalAlignment="Center" Width="24" RenderTransformOrigin="0.5,0.5" Fill="#FF646464">
@@ -41,6 +41,7 @@
             </Path>
 
         </Grid>
+
 
     </Grid>
 </Page>

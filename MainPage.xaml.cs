@@ -13,6 +13,12 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Newtonsoft.Json;
+using Currency_Converter.Valutes;
+using System.Net;
+using Currency_Converter.Valutes.RootObjects;
+
+
 
 // Документацию по шаблону элемента "Пустая страница" см. по адресу https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x419
 
@@ -26,6 +32,11 @@ namespace Currency_Converter
         public MainPage()
         {
             this.InitializeComponent();
+            WebClient client = new WebClient();
+            string str = client.DownloadString("https://www.cbr-xml-daily.ru/daily_json.js");
+            Rootobject rootobject = JsonConvert.DeserializeObject<Rootobject>(str);
+            //Console.WriteLine(rootobject.Valute.UAH.ID);
+            FirstTextBox.Text = Convert.ToString((rootobject.Valute.EUR.Value)/rootobject.Valute.EUR.Nominal);
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -37,11 +48,11 @@ namespace Currency_Converter
         {
 
         }
-        void hyperlink_Click(object sender, RoutedEventArgs e)
+       private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
         {
-            Process.Start("www.nookery.ru"); //открытие ссылки в браузере
-
+            this.Frame.Navigate(typeof(Currency_Converter.ValutesPage));
         }
+      
 
         private void TextBlock_SelectionChanged_1(object sender, RoutedEventArgs e)
         {
@@ -53,6 +64,9 @@ namespace Currency_Converter
 
         }
 
-        
+        private void TextBlock_SelectionChanged_2(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }
